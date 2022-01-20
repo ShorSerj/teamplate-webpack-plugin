@@ -4,7 +4,7 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWwebpackPlugin = require('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 
@@ -49,18 +49,11 @@ const cssLoaders = extra => {
 const babelOptions = preset => {
     const options = {
         presets: [
-            "@babel/preset-react",
-            {
-              "pragma": "dom", // default pragma is React.createElement (only in classic runtime)
-              "pragmaFrag": "DomFrag", // default is React.Fragment (only in classic runtime)
-              "throwIfNamespace": false, // defaults to true
-              "runtime": "classic" // defaults to classic
-              // "importSource": "custom-jsx-library" // defaults to react (only in automatic runtime)
-            }
+            '@babel/preset-env'
           ],
-        // plugins: [
-        //     '@babel/plugin-proposal-class-properties'
-        // ]
+        plugins: [
+            '@babel/plugin-proposal-class-properties'
+        ]
     }
 
     if (preset) {
@@ -86,8 +79,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill', './index.jsx']
-        // analytics: './analytics.ts'
+        main: ['core-js/stable', './index.jsx']
+
     },
     output: {
         filename: filename('js'),

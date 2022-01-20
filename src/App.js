@@ -12,13 +12,13 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { initializedSuccessAC } from './redux/app-reducer.js';
 
-function App(props) {
+function App(prop) {
   useEffect( () => {
-    props.initializedSuccessAC()
+    prop.initializedSuccessAC()
   })
 
-  if(!props.initialized) {
-    return (<h1>Hello</h1>) //<Preloader/>
+  if(!prop.initialized) {
+    return <h1>Aome</h1>//<Preloader/>
 }
   return (
     <>
@@ -39,5 +39,6 @@ const mapStateToProps = (state) => ({
 })
 export default compose(
   connect(mapStateToProps, 
-    {initializedSuccessAC}))(App)
+    {initializedSuccessAC}
+    ))(App)
 
