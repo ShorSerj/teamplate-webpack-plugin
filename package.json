@@ -1,5 +1,5 @@
 {
-  "name": "webpack-5-react",
+  "name": "teamplate-webpack-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,25 +11,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aAleksandrOrlov/webpack-5-config.git"
+    "url": "git+https://github.com/ShorSerj/teamplate-webpack-plugin.git"
   },
   "keywords": [
     "JavaScript",
     "Webpack",
     "Node"
   ],
-  "author": "aleksandr <aleksandr.orlov.dev@gmail.com>",
+  "author": "Sergey Shornikov <shorser8@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aAleksandrOrlov/webpack-5-config/issues"
-  },
-  "homepage": "https://github.com/aAleksandrOrlov/webpack-5-config#readme",
   "devDependencies": {
     "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
     "html-loader": "^3.0.1",
